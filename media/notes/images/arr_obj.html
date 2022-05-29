@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><div class="container">this is my new page
+    <p id="item1">madhur</p>
+    <p id="item2">jais</p>
+    <p id="item3"></p>
+    <p id="item4"></p>
+</div>
+
+    <script>
+        let employee  = {
+            name : "madhur jais",
+            age : 21 ,
+            gender: "male",
+        }
+        // console.log(employee);
+        // let arr = [1,3,2,4,"harry"];
+
+        // console.log(arr.length);
+        // console.log(arr.sort());
+        // console.log(arr.push("pushed"));
+        // let arr1 = new Array(12);
+        // console.log(arr1);
+        // function det(name){
+        //     console.log(name +" " +"is a bad boy");
+        // }
+        // function sum(a,b,c = 4){
+        //     d = a+b+c ;
+        //     return d
+        // }
+        // det("madhur");
+        // console.log(sum(2,3));
+        // alert("this page is so sensitive");
+        // alert does not return anythings\
+        // let age = prompt("your age is --");
+        // if (age >18){
+        //     document.write("you are eligible to visit this page");
+        // }
+        // else{
+        //     document.close();
+        // }
+        // let age = confirm("your age is greater than 18");
+        // if (age){
+        //     console.log("you are eligible");
+        // }
+        // else{
+        //     console.log("you are not eligible");
+        // }
+        friends = ["avi",'ritick','nitesh'];
+        // for(element of friends){
+        //     console.log("hello friend " + element);
+        // }
+        // for(i =0; i< friends.length;i++){
+        //     console.log("hello world "+ friends[i]);
+        // }
+        for(key in employee){
+            console.log(`${key} of coder is ${employee[key]}`);
+        }
+        let i = 0
+        while(i<4){
+            console.log(`${i} is present here`)
+            i++ ;        }
+        // let querry = document.querySelector('.container');
+        let querry = document.querySelectorAll('.container>p');
+        console.log(querry);
+        
+    </script>
+</body>
+</html>
