@@ -8,7 +8,7 @@ from .models import notes ,DBMS , Contact , Notice
 
 def blogpost(request,id):
     note = DBMS.objects.filter(chapter_id = id)
-    return render(request,'notes/blogpost.html',{"note":note})
+    return render(request,'notes/blogpost.html',{"note":note , 'chapter_id':id})
 # def DBMS(request):
 #     dbms = DBMS.objects.filter()
 def home(request):

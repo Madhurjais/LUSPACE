@@ -15,7 +15,7 @@
         <div class="w3-bar w3-black w3-card">
           <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
           <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-          <a href="http://127.0.0.1:8000/notes" class="w3-bar-item w3-button w3-padding-large w3-hide-small">NOTES</a>
+          <a href="/notes" class="w3-bar-item w3-button w3-padding-large w3-hide-small">NOTES</a>
           <a href="/notes/notice" class="w3-bar-item w3-button w3-padding-large w3-hide-small">NOTICES</a>
           <div class="w3-dropdown-hover w3-hide-small">
             <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
@@ -31,9 +31,8 @@
       
       <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
       <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-        <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
-        <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+        <a href="/notes" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">NOTES</a>
+        <a href="/notes/contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">NOTICES</a>
       
       </div>
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
@@ -69,4 +68,32 @@
         </div>
       </div>
 </body>
+<script>
+  // Automatic Slideshow - change image every 4 seconds
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);    
+  }
+  
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  
+  </script>
 </html>
